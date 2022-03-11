@@ -17,6 +17,7 @@ class F implements Fighter {
 const b = new B(new F());
 
 const result = () => {
+  console.log(player2, player3);
   runBattles([pve, pvp, b]);
   let res = true;
   

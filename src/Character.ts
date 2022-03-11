@@ -73,6 +73,13 @@ export default class Character implements Fighter {
     return { ...this._energy };
   }
 
+  decreaseDefense(attackPoints: number) {
+    if (this._defense !== 0) {
+      this._defense = this._defense - attackPoints <= 0
+        ? 0 : this._defense - attackPoints;
+    }
+  }
+
   receiveDamage(attackPoints: number) {
     const damage = attackPoints - this._defense;
     
@@ -84,8 +91,8 @@ export default class Character implements Fighter {
         this._lifePoints -= damage;
       }
     }
+    this.decreaseDefense(attackPoints);
     
-    this._defense = damage < 0 ? this._defense - attackPoints : 0;
     return this._lifePoints;
   }
 
