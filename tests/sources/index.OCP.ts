@@ -19,6 +19,7 @@ const b = new B(new F());
 const result = () => {
   runBattles([pve, pvp, b]);
   let res = true;
+  
   if (player1.lifePoints !== -1) {
     if (monster1.lifePoints !== -1 && monster2.lifePoints !== -1) res = false;
   }
