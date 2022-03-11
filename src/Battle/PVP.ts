@@ -1,4 +1,3 @@
-import Character from '../Character';
 import Fighter from '../Fighter';
 import Battle from './Battle';
 
