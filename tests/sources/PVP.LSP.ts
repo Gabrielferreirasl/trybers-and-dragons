@@ -13,6 +13,6 @@ const result = () => {
   for (let i = 0; i < 500; i++) player3.levelUp();
   const player4 = new Character('');
   const pvp2 = new PVP(player4, player3);
-
+  
   return [fight(pvp1), fight(pvp2)];
 };
